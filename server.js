@@ -1,6 +1,13 @@
 // Import the Express.js library
 const express = require('express');
 const cors=require('cors');
+const corsOptions = {
+  origin: '*',
+};
+const app = express();
+
+app.use(cors(corsOptions));
+
 const { ObjectId } = require('mongodb');
 require('dotenv').config();
 
@@ -18,8 +25,8 @@ console.log(mongoURI);
 
 
 // Create an Express application
-const app = express();
-app.use(cors());
+
+
 
 // // Define a route handler for the root URL "/"
 // app.get('/', (req, res) => {
