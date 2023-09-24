@@ -1,9 +1,12 @@
 // Import the Express.js library
 const express = require('express');
 const cors=require('cors');
-
+const corsOptions = {
+  origin: '*',
+};
 const app = express();
-app.use(cors({ origin: 'https://todolist-aee1.onrender.com' }));
+
+app.use(cors(corsOptions));
 
 const { ObjectId } = require('mongodb');
 require('dotenv').config();

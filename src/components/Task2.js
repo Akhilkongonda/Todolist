@@ -17,7 +17,7 @@ function Task2() {
     setTask(newTask);
 
     axios
-      .post('https://todolist-aee1.onrender.com/addTask', { task: newTask })
+      .post('http://localhost:5000/addTask', { task: newTask })
       .then((response) => {
         setRes(response.data);
       })
@@ -30,7 +30,7 @@ function Task2() {
 
   useEffect(() => {
     axios
-      .get('https://todolist-aee1.onrender.com/gettask')
+      .get('http://localhost:5000/gettask')
       .then((res) => {
         setMessages(res.data);
         // Initialize edit mode and edited tasks state for each task
@@ -48,7 +48,7 @@ function Task2() {
     setMessages(updatedMessages);
 
     axios
-      .delete(`https://todolist-aee1.onrender.com/deleteTask/${deletedTask._id}`)
+      .delete(`http://localhost:5000/deleteTask/${deletedTask._id}`)
       .then((res) => {
         console.log(`Task with ID ${deletedTask._id} deleted from the database.`);
       })
@@ -77,7 +77,7 @@ function Task2() {
 
     // Send a request to your backend to update the task text in the database
     axios
-      .put(`https://todolist-aee1.onrender.com/updateTask/${messages[index]._id}`, { task: editedTasks[index] })
+      .put(`http://localhost:5000/updateTask/${messages[index]._id}`, { task: editedTasks[index] })
       .then((res) => {
         console.log(`Task with ID ${messages[index]._id} updated in the database.`);
       })
