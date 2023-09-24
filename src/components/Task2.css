@@ -1,0 +1,153 @@
+/* Container styles */
+
+.container {
+  max-width: 700px;
+  margin: auto;
+  padding: 20px;
+  background-color: #FAACA8;
+  background-image: linear-gradient(19deg, #FAACA8 0%, #DDD6F3 50%, #ffffff 100%);
+
+}
+
+/* Title styles */
+.card-title {
+  text-align: center;
+  background-color: #1699f7;
+  color: white;
+  padding: 10px 0;
+  border-radius: 10px;
+}
+
+/* Input and Add Button styles */
+.input-group {
+  display: flex;
+  align-items: center;
+}
+
+.input {
+  width: 70%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  margin-right: 10px;
+}
+
+.plusButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  background-color: #1699f7;
+  border: 1px solid white;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.plusIcon {
+  fill: white;
+  width: 30px;
+  height: 30px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.plusButton:hover .plusIcon {
+  transform: rotate(180deg);
+}
+
+/* Error message styles */
+.error-message {
+  text-align: center;
+  color: red;
+}
+
+/* Task item styles */
+.task1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 0;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: #f7f7f7;
+}
+
+/* Edit and Delete Button styles */
+.edit-button,
+.delete-button {
+  display: flex;
+  align-items: center;
+}
+
+.edit-button button,
+.delete-button button,
+.save-button {
+  /* background-color: #1699f7; */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.save-button {
+  background-image: radial-gradient( circle farthest-corner at 92.3% 71.5%,  rgba(83,138,214,1) 0%, rgba(134,231,214,1) 90% );
+  border-radius: 5px;
+  padding: 5px 10px;
+  margin-left: 10px;
+ 
+
+}
+
+/* Media query for smaller screens (adjust as needed) */
+@media (max-width: 600px) {
+  .input {
+    width: 60%;
+  }
+}
+
+/* Additional styling for better button alignment */
+.task1 p {
+  flex-grow: 1;
+  margin: 0;
+display: contents;
+ 
+
+ 
+
+}
+
+.edit-button button,
+.delete-button button,
+.save-button {
+  min-width: 70px;
+ 
+  
+
+
+
+}
+.edit-button{
+  display: flex;
+  justify-content: end;
+}
+
+.edit-button button {
+
+  background-image: radial-gradient( circle farthest-corner at 92.3% 71.5%,  rgba(83,138,214,1) 0%, rgba(134,231,214,1) 90% );
+
+  
+}
+
+.textp{
+  justify-content: right;
+  padding: 0;
+
+}
+
+.texthead{
+  color: #3fa5ee;
+  font-family:Georgia, 'Times New Roman', Times, serif
+}
