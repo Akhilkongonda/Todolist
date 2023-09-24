@@ -2,12 +2,15 @@
 const express = require('express');
 const cors=require('cors');
 const { ObjectId } = require('mongodb');
-const dotenv = require('dotenv');
-dotenv.config();
+require('dotenv').config();
+
 console.log("ENV :",process.env) 
 
 const mongoURI = process.env.MONGODB;
-// console.log(mongoURI);
+console.log(mongoURI);
+
+ 
+
 
 
 
@@ -23,7 +26,7 @@ app.use(cors());
 
 // Start the server and listen on a specific port (e.g., 3000)
 const port = 5000;
-app.listen(port, () => {
+app.listen(port, () => { 
   console.log(`Server is running on port ${port}`);
 }); 
 
@@ -31,7 +34,7 @@ app.use(express.json());
 // console.log(mongoURI);
 
 const mclient=require("mongodb").MongoClient;
-mclient.connect('mongodb://127.0.0.1:27017')
+mclient.connect(mongoURI)
 .then(dbserverref=>{
     const todosdb=dbserverref.db('todolist');
     listobj=todosdb.collection('listoftodos');
