@@ -2,6 +2,13 @@
 const express = require('express');
 const cors=require('cors');
 const { ObjectId } = require('mongodb');
+const dotenv = require('dotenv');
+dotenv.config();
+console.log("ENV :",process.env) 
+
+const mongoURI = process.env.MONGODB;
+// console.log(mongoURI);
+
 
 
 
@@ -18,9 +25,10 @@ app.use(cors());
 const port = 5000;
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
-});
+}); 
 
 app.use(express.json());
+// console.log(mongoURI);
 
 const mclient=require("mongodb").MongoClient;
 mclient.connect('mongodb://127.0.0.1:27017')
